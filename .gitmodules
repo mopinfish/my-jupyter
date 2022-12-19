@@ -1,0 +1,3 @@
+[submodule "docker/work/submodules/PyOptBook"]
+	path = docker/work/submodules/PyOptBook
+	url = git@github.com:ohmsha/PyOptBook.git
