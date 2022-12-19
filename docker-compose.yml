@@ -29,7 +29,6 @@ services:
       - "8888:8888"
     environment:
       - JUPYTER_ENABLE_LAB=yes
-    depends_on:
     volumes:
       - ./docker/doc:/home/jovyan/doc
       - ./docker/work:/home/jovyan/work
