@@ -30,7 +30,6 @@ services:
     environment:
       - JUPYTER_ENABLE_LAB=yes
     volumes:
-      - ./docker/doc:/home/jovyan/doc
       - ./docker/work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
 
