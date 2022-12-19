@@ -33,3 +33,13 @@ services:
       - ./docker/work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
 
+  app:
+    build:
+      context: .
+      dockerfile: dockerfiles/flask/Dockerfile
+    ports:
+      - "4000:5000"
+    container_name: app
+    volumes:
+      - ./docker/work/submodules/PyOptBook/6.api:/usr/src/app
+    command: flask run --host=0.0.0.0
