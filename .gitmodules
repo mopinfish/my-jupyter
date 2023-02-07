@@ -1,3 +1,6 @@
 [submodule "docker/work/submodules/PyOptBook"]
 	path = docker/work/submodules/PyOptBook
 	url = git@github.com:ohmsha/PyOptBook.git
+[submodule "docker/work/submodules/mcr-notebooks"]
+	path = docker/work/submodules/mcr-notebooks
+	url = git@hub.georepublic.net:georepublic/mcr-notebooks.git
