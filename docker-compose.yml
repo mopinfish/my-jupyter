@@ -29,6 +29,7 @@ services:
       - "8888:8888"
     environment:
       - JUPYTER_ENABLE_LAB=yes
+      - MCR_ROAD_TYPE_API_KEY=${MCR_ROAD_TYPE_API_KEY}
     volumes:
       - ./docker/work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
