@@ -29,7 +29,10 @@ services:
       - "8888:8888"
     environment:
       - JUPYTER_ENABLE_LAB=yes
+      - BASE_URL=${BASE_URL}
+      - BYPASS_API_BASE_URL=${BYPASS_API_BASE_URL}
       - MCR_ROAD_TYPE_API_KEY=${MCR_ROAD_TYPE_API_KEY}
+      - SENTRY_TOKEN=${SENTRY_TOKEN}
     volumes:
       - ./docker/work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
