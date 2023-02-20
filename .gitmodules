@@ -10,3 +10,7 @@
 	path = docker/work/submodules/osmnx-examples
 	url = git@github.com:gboeing/osmnx-examples.git
 	ignore = dirty
+[submodule "docker/work/submodules/auto-gis"]
+	path = docker/work/submodules/auto-gis
+	url = git@github.com:Automating-GIS-processes/notebooks.git
+	ignore = dirty
