@@ -9,6 +9,7 @@ psycopg2 = "==2.9.3"
 imblearn = "==0.0"
 pulp = "*"
 osmnx = "*"
+geopy = "*"
 
 [dev-packages]
 
