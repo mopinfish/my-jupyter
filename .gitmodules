@@ -1,9 +1,11 @@
 [submodule "docker/work/submodules/PyOptBook"]
 	path = docker/work/submodules/PyOptBook
 	url = git@github.com:ohmsha/PyOptBook.git
+	ignore = dirty
 [submodule "docker/work/submodules/mcr-notebooks"]
 	path = docker/work/submodules/mcr-notebooks
 	url = git@hub.georepublic.net:georepublic/mcr-notebooks.git
+	ignore = dirty
 [submodule "docker/work/submodules/osmnx-examples"]
 	path = docker/work/submodules/osmnx-examples
 	url = git@github.com:gboeing/osmnx-examples.git
