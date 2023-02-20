@@ -7,3 +7,4 @@
 [submodule "docker/work/submodules/osmnx-examples"]
 	path = docker/work/submodules/osmnx-examples
 	url = git@github.com:gboeing/osmnx-examples.git
+	ignore = dirty
