@@ -10,6 +10,7 @@ imblearn = "==0.0"
 pulp = "*"
 osmnx = "*"
 geopy = "*"
+pykakasi = "*"
 
 [dev-packages]
 
