@@ -12,8 +12,12 @@ WORKDIR /home/jovyan
 COPY /src/notebook/Pipfile .
 COPY /src/notebook/Pipfile.lock .
 
-RUN pip install --no-cache-dir pipenv==2021.5.29 \
-    && pipenv install --system --ignore-pipfile --deploy \
+RUN pip install --no-cache-dir pipenv==2023.4.29 \
+    && pipenv install --ignore-pipfile --deploy \
     && rm -rf Pipfile* /tmp/* /var/tmp/*
+
+#RUN pip install --no-cache-dir pipenv==2023.4.29
+#RUN pipenv install --ignore-pipfile --deploy
+#RUN rm -rf Pipfile* /tmp/* /var/tmp/*
 
 HEALTHCHECK --interval=5s --retries=20 CMD ["curl", "-s", "-S", "-o", "/dev/null", "http://localhost:8888"]
