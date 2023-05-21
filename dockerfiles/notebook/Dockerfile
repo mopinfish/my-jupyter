@@ -13,9 +13,10 @@ COPY /src/notebook/Pipfile .
 COPY /src/notebook/Pipfile.lock .
 
 RUN pip install --no-cache-dir pipenv==2023.4.29 \
-    && pipenv install --ignore-pipfile --deploy \
+    && pipenv install --system --ignore-pipfile --deploy \ 
     && rm -rf Pipfile* /tmp/* /var/tmp/*
 
+#ENV PATH="/path/to/.venv/bin:$PATH"
 #RUN pip install --no-cache-dir pipenv==2023.4.29
 #RUN pipenv install --ignore-pipfile --deploy
 #RUN rm -rf Pipfile* /tmp/* /var/tmp/*

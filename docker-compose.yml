@@ -24,7 +24,7 @@ services:
       context: .
       dockerfile: dockerfiles/notebook/Dockerfile
     image: my-jupyter
-    platform: linux/x86_64
+    platform: linux/arm64
     container_name: my-jupyter
     ports:
       - "8888:8888"
@@ -42,6 +42,7 @@ services:
     build:
       context: .
       dockerfile: dockerfiles/flask/Dockerfile
+    platform: linux/arm64
     ports:
       - "4000:5000"
     container_name: app
