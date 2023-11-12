@@ -14,3 +14,6 @@
 	path = docker/work/submodules/auto-gis
 	url = git@github.com:Automating-GIS-processes/notebooks.git
 	ignore = dirty
+[submodule "docker/work/submodules/geo-data-hands-on"]
+	path = docker/work/submodules/geo-data-hands-on
+	url = git@github.com:fin-py/geo-data-hands-on.git
