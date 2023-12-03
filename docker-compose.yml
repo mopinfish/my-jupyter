@@ -34,6 +34,8 @@ services:
       - BYPASS_API_BASE_URL=${BYPASS_API_BASE_URL}
       - MCR_ROAD_TYPE_API_KEY=${MCR_ROAD_TYPE_API_KEY}
       - SENTRY_TOKEN=${SENTRY_TOKEN}
+      - GDAL_VERSION=3.7.3
+      - GDAL_CONFIG=/usr/local/bin/gdal-config
     volumes:
       - ./docker/work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
