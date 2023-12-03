@@ -17,3 +17,6 @@
 [submodule "docker/work/submodules/geo-data-hands-on"]
 	path = docker/work/submodules/geo-data-hands-on
 	url = git@github.com:fin-py/geo-data-hands-on.git
+[submodule "docker/work/submodules/book-python-stats-2nd"]
+	path = docker/work/submodules/book-python-stats-2nd
+	url = git@github.com:logics-of-blue/book-python-stats-2nd.git
