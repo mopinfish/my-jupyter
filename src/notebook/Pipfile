@@ -17,6 +17,8 @@ osmnx = "*"
 geopy = "*"
 pykakasi = "*"
 folium = "*"
+lxml = "*"
+html5lib = "*"
 
 [dev-packages]
 

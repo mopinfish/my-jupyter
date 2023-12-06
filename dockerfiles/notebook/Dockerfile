@@ -10,8 +10,9 @@ RUN apt-get update \
     && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor -o /usr/share/keyrings/postgres-archive-keyring.gpg \
     && sh -c 'echo "deb [signed-by=/usr/share/keyrings/postgres-archive-keyring.gpg] http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list' \
     && apt-get update \
-#    && apt-get install -y --no-install-recommends libpq-dev libmariadb-dev \
     && apt-get install -y --no-install-recommends gdal-bin libgdal-dev \
+    && apt-get install -y --no-install-recommends libxml2-dev libxslt-dev \
+#    && apt-get install -y --no-install-recommends libpq-dev libmariadb-dev \
     && apt-get remove -y lsb-release gnupg \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* /opt/julia-*/share/julia/stdlib/v*/SuiteSparse/.devcontainer/Dockerfile /opt/julia/packages/Pluto/*/.vscode/ \
@@ -24,8 +25,8 @@ COPY /src/notebook/Pipfile .
 COPY /src/notebook/Pipfile.lock .
 
 # hadolint ignore=SC2016
-RUN pip install --no-cache-dir pipenv==2021.5.29 \
-    && pipenv install --system \
+RUN pip3 install --no-cache-dir pipenv==2021.5.29 \
+    && pipenv install --system --ignore-pipfile --deploy \
     && Rscript -e 'install.packages("pak", repos = sprintf("https://r-lib.github.io/p/pak/stable/%s/%s/%s", .Platform$pkgType, R.Version()$os, R.Version()$arch))' \
     && Rscript -e 'pak::repo_add(CRAN = "RSPM@2022-12-16"); pak::pak(c("DBI", "RPostgreSQL", "themis"))' \
     && rm -rf Pipfile* .cache/R/pkgcache/sysreqs/docker/*/Dockerfile /tmp/* /var/tmp/*
