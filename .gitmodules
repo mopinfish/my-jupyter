@@ -22,3 +22,6 @@
 	path = docker/work/submodules/book-python-stats-2nd
 	url = git@github.com:logics-of-blue/book-python-stats-2nd.git
 	ignore = dirty
+[submodule "docker/work/submodules/auto_gis_lessons"]
+	path = docker/work/submodules/auto_gis_lessons
+	url = git@github.com:Automating-GIS-processes/notebooks.git
