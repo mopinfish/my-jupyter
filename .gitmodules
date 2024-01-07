@@ -25,3 +25,9 @@
 [submodule "docker/work/submodules/auto_gis_lessons"]
 	path = docker/work/submodules/auto_gis_lessons
 	url = git@github.com:Automating-GIS-processes/notebooks.git
+[submodule "docker/work/submodules/ppd534"]
+	path = docker/work/submodules/ppd534
+	url = git@github.com:gboeing/ppd534.git
+[submodule "docker/work/submodules/ppd599"]
+	path = docker/work/submodules/ppd599
+	url = git@github.com:gboeing/ppd599.git
