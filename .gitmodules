@@ -29,3 +29,8 @@
 [submodule "docker/work/submodules/auto-gis-notebooks"]
 	path = docker/work/submodules/auto-gis-notebooks
 	url = git@github.com:mopinfish/auto-gis-notebooks.git
+	ignore = dirty
+[submodule "docker/work/submodules/ppde642"]
+	path = docker/work/submodules/ppde642
+	url = git@github.com:gboeing/ppde642.git
+	ignore = dirty

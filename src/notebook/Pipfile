@@ -23,6 +23,9 @@ html5lib = "*"
 mapclassify = "*"
 igraph = "*"
 rasterio = "*"
+cenpy = "*"
+pandana = "*"
+contextily = "*"
 
 [dev-packages]
 
