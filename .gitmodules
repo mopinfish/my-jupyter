@@ -10,10 +10,6 @@
 	path = docker/work/submodules/osmnx-examples
 	url = git@github.com:gboeing/osmnx-examples.git
 	ignore = dirty
-[submodule "docker/work/submodules/auto-gis"]
-	path = docker/work/submodules/auto-gis
-	url = git@github.com:Automating-GIS-processes/notebooks.git
-	ignore = dirty
 [submodule "docker/work/submodules/geo-data-hands-on"]
 	path = docker/work/submodules/geo-data-hands-on
 	url = git@github.com:fin-py/geo-data-hands-on.git
@@ -22,12 +18,14 @@
 	path = docker/work/submodules/book-python-stats-2nd
 	url = git@github.com:logics-of-blue/book-python-stats-2nd.git
 	ignore = dirty
-[submodule "docker/work/submodules/auto_gis_lessons"]
-	path = docker/work/submodules/auto_gis_lessons
-	url = git@github.com:Automating-GIS-processes/notebooks.git
 [submodule "docker/work/submodules/ppd534"]
 	path = docker/work/submodules/ppd534
 	url = git@github.com:gboeing/ppd534.git
+	ignore = dirty
 [submodule "docker/work/submodules/ppd599"]
 	path = docker/work/submodules/ppd599
 	url = git@github.com:gboeing/ppd599.git
+	ignore = dirty
+[submodule "docker/work/submodules/auto-gis-notebooks"]
+	path = docker/work/submodules/auto-gis-notebooks
+	url = git@github.com:mopinfish/auto-gis-notebooks.git
