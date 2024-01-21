@@ -26,6 +26,8 @@ rasterio = "*"
 cenpy = "*"
 pandana = "*"
 contextily = "*"
+esda = "*"
+mgwr = "*"
 
 [dev-packages]
 
