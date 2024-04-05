@@ -34,3 +34,6 @@
 	path = docker/work/submodules/ppde642
 	url = git@github.com:gboeing/ppde642.git
 	ignore = dirty
+[submodule "docker/work/submodules/python_bayes_intro"]
+	path = docker/work/submodules/python_bayes_intro
+	url = git@github.com:makaishi2/python_bayes_intro.git
