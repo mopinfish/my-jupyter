@@ -28,6 +28,8 @@ pandana = "*"
 contextily = "*"
 esda = "*"
 mgwr = "*"
+pymc = "*"
+arviz = "*"
 
 [dev-packages]
 
