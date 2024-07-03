@@ -40,3 +40,6 @@
 [submodule "docker/work/submodules/travel-time-prediction"]
 	path = docker/work/submodules/travel-time-prediction
 	url = git@github.com:gboeing/travel-time-prediction.git
+[submodule "docker/work/submodules/contextily"]
+	path = docker/work/submodules/contextily
+	url = git@github.com:geopandas/contextily.git
