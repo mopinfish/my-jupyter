@@ -17,7 +17,7 @@ docker container cp ${PROJ_DIR}/src/notebook/Pipfile "$CONTAINER":${WORK_DIR}Pip
 docker container cp ${PROJ_DIR}/src/notebook/Pipfile.lock "$CONTAINER":${WORK_DIR}Pipfile.lock
 
 # コンテナでPipfile.lock更新
-docker container exec --workdir ${WORK_DIR} "$CONTAINER" pipenv lock
+docker container exec --workdir ${WORK_DIR} "$CONTAINER" pipenv lock --clear
 
 # コンテナ -> ホストにPipfile.lockを取得
 docker container exec "$CONTAINER" cat "$WORK_DIR"Pipfile | grep "osmnx"
