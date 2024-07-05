@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0ce4e285f6aea94fe5d8ceec7b96e3e7bb8eac2cccd9e1b16eebf8c3402da181"
+            "sha256": "b6f2cdecd3121246b4f1c824f715a9767f94ff80fb63b9977eef59411610f2bd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -21,7 +21,7 @@
                 "sha256:8a3df80e2b2378aef598a83c1392efd47967afec4242021a0b06b4c7cbc61a92",
                 "sha256:a24d818d6a836c131976d22f8c27b8d3ca32d0af64c1d8d29deb7bafa4da1eea"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==2.4.0"
         },
         "asttokens": {
@@ -36,7 +36,7 @@
                 "sha256:935dc3b529c262f6cf76e50877d35a4bd3c1de194fd41f47a2b7ae8f19971f30",
                 "sha256:99b87a485a5820b23b879f04c2305b44b951b502fd64be915879d77a7e8fc6f1"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==23.2.0"
         },
         "backoff": {
@@ -44,7 +44,7 @@
                 "sha256:03f829f5bb1923180821643f8753b0502c3b682293992485b0eef2807afa5cba",
                 "sha256:63579f9a0628e06278f7e47b7d7d5b6ce20dc65c5e96a6f3ca99a6adca0396e8"
             ],
-            "markers": "python_version < '4.0' and python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7' and python_version < '4.0'",
             "version": "==2.2.1"
         },
         "beautifulsoup4": {
@@ -88,7 +88,7 @@
                 "sha256:853a359c34d08fd06498be762d8be9932750db4049cac11e25dd6f23562e25c2",
                 "sha256:ca4c94643ef31b819987ca5bd19c6009ea17b440baa3aac04628545f7a4da023"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==0.7.2"
         },
         "cenpy": {
@@ -199,7 +199,7 @@
                 "sha256:fd1abc0d89e30cc4e02e4064dc67fcc51bd941eb395c502aac3ec19fab46b519",
                 "sha256:ff8fa367d09b717b2a17a052544193ad76cd49979c805768879cb63d9ca50561"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==3.3.2"
         },
         "click": {
@@ -207,7 +207,7 @@
                 "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28",
                 "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==8.1.7"
         },
         "click-plugins": {
@@ -393,12 +393,20 @@
             "index": "pypi",
             "version": "==3.4.1"
         },
+        "geodatasets": {
+            "hashes": [
+                "sha256:6abf6dc2b5ec930465b19c33a1ba4211bf8aebbd544495ae9a5e81d9ca3ca294",
+                "sha256:8867fa6966aeae3fe854697c9fb7d429666ae7ae8edda9b77c87c8e616ba6c65"
+            ],
+            "index": "pypi",
+            "version": "==2023.12.0"
+        },
         "geographiclib": {
             "hashes": [
                 "sha256:6b7225248e45ff7edcee32becc4e0a1504c606ac5ee163a5656d482e0cd38734",
                 "sha256:f7f41c85dc3e1c2d3d935ec86660dc3b2c848c83e17f9a9e51ba9d5146a15859"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==2.0"
         },
         "geopandas": {
@@ -591,7 +599,7 @@
                 "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369",
                 "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==3.1.4"
         },
         "joblib": {
@@ -717,7 +725,7 @@
                 "sha256:fd32ea360bcbb92d28933fc05ed09bffcb1704ba3fc7942e81db0fd4f81a7892",
                 "sha256:fdb7adb641a0d13bdcd4ef48e062363d8a9ad4a182ac7647ec88f695e719ae9f"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==1.4.5"
         },
         "libpysal": {
@@ -947,7 +955,7 @@
                 "sha256:fce659a462a1be54d2ffcacea5e3ba2d74daa74f30f5f143fe0c58636e355fdd",
                 "sha256:ffee1f21e5ef0d712f9033568f8344d5da8cc2869dbd08d87c84656e6a2d2f68"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==2.1.5"
         },
         "matplotlib": {
@@ -1353,6 +1361,14 @@
             ],
             "version": "==0.2.25"
         },
+        "pooch": {
+            "hashes": [
+                "sha256:3529a57096f7198778a5ceefd5ac3ef0e4d06a6ddaf9fc2d609b806f25302c47",
+                "sha256:76561f0de68a01da4df6af38e9955c4c9d1a5c90da73f7e40276a5728ec83d10"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==1.8.2"
+        },
         "posthog": {
             "hashes": [
                 "sha256:3c672be7ba6f95d555ea207d4486c171d06657eb34b3ce25eb043bfe7b6b5b76",
@@ -1373,7 +1389,7 @@
                 "sha256:0d7bfa67001d5e39d02c224b663abc33687405033a8c422d0d675a5a13361d10",
                 "sha256:1e1b29cb58080b1e69f207c893a1a7bf16d127a5c30c9d17a25a5d77792e5360"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==3.0.47"
         },
         "psycopg2": {
@@ -1736,7 +1752,7 @@
                 "sha256:ec555c9d0db12d7fd777ba3f8b75044c73e576c720a851667432fabb7057da6c",
                 "sha256:fb5cdcbbe3080181498931b52a91a21a781a35dcb859da741c0345c6402bf00c"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==2.0.4"
         },
         "six": {
@@ -1830,7 +1846,7 @@
                 "sha256:33d8e28f342ced643fc77f832ee54219c2a64dfa1e71e1ca542fcffce051a176",
                 "sha256:fe1b2a45e0ffe3d6832b200cf6517ca8befaa9fa2c6998c0a910f6facabd07b9"
             ],
-            "markers": "python_full_version >= '3.7.0'",
+            "markers": "python_version >= '3.7'",
             "version": "==25.5.0"
         },
         "sqlparse": {
