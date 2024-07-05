@@ -28,9 +28,6 @@ pandana = "*"
 contextily = "*"
 esda = "*"
 mgwr = "*"
-pymc = "*"
-arviz = "*"
-geodatasets = "*"
 
 [dev-packages]
 
