@@ -22,7 +22,7 @@ lxml = "*"
 html5lib = "*"
 mapclassify = "*"
 igraph = "*"
-rasterio = "*"
+rasterio = "1.4.2"
 cenpy = "*"
 pandana = "*"
 contextily = "*"
@@ -35,4 +35,4 @@ geodatasets = "*"
 [dev-packages]
 
 [requires]
-python_version = "3.11"
+python_version = "3.12"
