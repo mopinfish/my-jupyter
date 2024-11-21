@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   #db:
   #  build:
@@ -33,21 +31,12 @@ services:
       - BASE_URL=${BASE_URL}
       - BYPASS_API_BASE_URL=${BYPASS_API_BASE_URL}
       - MCR_ROAD_TYPE_API_KEY=${MCR_ROAD_TYPE_API_KEY}
-      - SENTRY_TOKEN=${SENTRY_TOKEN}
+      # for GDAL
       - GDAL_VERSION=3.7.3
       - GDAL_CONFIG=/usr/local/bin/gdal-config
+      - CPLUS_INCLUDE_PATH=/usr/include/gdal
+      - C_INCLUDE_PATH=/usr/include/gdal
+      - LIBRARY_PATH=/usr/lib
     volumes:
       - ./docker/work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
-
-  app:
-    build:
-      context: .
-      dockerfile: dockerfiles/flask/Dockerfile
-    platform: linux/arm64
-    ports:
-      - "4000:5000"
-    container_name: app
-    volumes:
-      - ./docker/work/submodules/PyOptBook/6.api:/usr/src/app
-    command: flask run --host=0.0.0.0
