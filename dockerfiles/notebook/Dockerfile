@@ -9,12 +9,6 @@ RUN echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/99custom && \
     echo "Acquire::http::No-Cache true;" >> /etc/apt/apt.conf.d/99custom && \
     echo "Acquire::BrokenProxy    true;" >> /etc/apt/apt.conf.d/99custom
 
-# for GDAL
-RUN apt-get update && apt-get install -y software-properties-common
-RUN add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-RUN apt-get update && apt-get install -y libgdal-dev
-#RUN pip install GDAL==$(gdal-config --version) --global-option=build_ext --global-option="-I/usr/include/gdal"
-
 RUN apt-get update && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends lsb-release gnupg \
     && wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | gpg --dearmor -o /usr/share/keyrings/postgres-archive-keyring.gpg \
@@ -28,7 +22,9 @@ RUN apt-get update && apt-get upgrade -y \
     && find / -type f -perm /u+s -ignore_readdir_race -exec chmod u-s {} \; \
     && find / -type f -perm /g+s -ignore_readdir_race -exec chmod g-s {} \;
 
-#RUN chown -R jovyan:users /home/jovyan
+# for install latest GDAL
+RUN conda install -c conda-forge gdal
+
 USER jovyan
 WORKDIR /home/jovyan
 COPY /src/notebook/Pipfile .
@@ -36,9 +32,7 @@ COPY /src/notebook/Pipfile.lock .
 
 # hadolint ignore=SC2016
 RUN pip3 install --no-cache-dir pipenv==2024.4.0 \
-    # pipenvを使用してrasterioをインストールする前に、GDALのPythonバインディングをインストール
-    && pipenv install --system --ignore-pipfile --deploy
-#    && pipenv install --system --ignore-pipfile --deploy \
-#    && rm -rf Pipfile* .cache/R/pkgcache/sysreqs/docker/*/Dockerfile /tmp/* /var/tmp/*
+    && pipenv install --system --ignore-pipfile --deploy \
+    && rm -rf Pipfile* .cache/R/pkgcache/sysreqs/docker/*/Dockerfile /tmp/* /var/tmp/*
 
 HEALTHCHECK --interval=5s --retries=20 CMD ["curl", "-s", "-S", "-o", "/dev/null", "http://localhost:8888"]
