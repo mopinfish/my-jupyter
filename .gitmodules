@@ -37,9 +37,6 @@
 [submodule "docker/work/submodules/python_bayes_intro"]
 	path = docker/work/submodules/python_bayes_intro
 	url = git@github.com:makaishi2/python_bayes_intro.git
-[submodule "docker/work/submodules/travel-time-prediction"]
-	path = docker/work/submodules/travel-time-prediction
-	url = git@github.com:gboeing/travel-time-prediction.git
 [submodule "docker/work/submodules/contextily"]
 	path = docker/work/submodules/contextily
 	url = git@github.com:geopandas/contextily.git
