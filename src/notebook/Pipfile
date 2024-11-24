@@ -31,6 +31,7 @@ mgwr = "*"
 pymc = "*"
 arviz = "*"
 geodatasets = "*"
+japanize_matplotlib = "*"
 
 [dev-packages]
 
