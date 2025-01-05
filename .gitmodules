@@ -36,3 +36,6 @@
 [submodule "docker/work/submodules/contextily"]
 	path = docker/work/submodules/contextily
 	url = git@github.com:geopandas/contextily.git
+[submodule "docker/work/submodules/geopy-notebooks"]
+	path = docker/work/submodules/geopy-notebooks
+	url = git@github.com:datamongerbonny/geopy-notebooks.git

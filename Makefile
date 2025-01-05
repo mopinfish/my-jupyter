@@ -12,5 +12,9 @@ removesubmodule:
 update_piplock:
 	/bin/bash -x scripts/update_piplock.sh
 cp_pipfiles_to_local:
-	docker compose cp notebook:/home/jovyan/Pipfile ./src/notebook/
-	docker compose cp notebook:/home/jovyan/Pipfile.lock ./src/notebook/
+	docker compose cp jupyter:/home/jovyan/Pipfile ./src/notebook/
+	docker compose cp jupyter:/home/jovyan/Pipfile.lock ./src/notebook/
+
+freeze:
+	docker compose exec jupyter pip list --format=freeze > requirements.txt
+	docker compose cp jupyter:/app/requirements.txt ./src/notebook/requirements.txt
