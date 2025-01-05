@@ -16,5 +16,4 @@ cp_pipfiles_to_local:
 	docker compose cp jupyter:/home/jovyan/Pipfile.lock ./src/notebook/
 
 freeze:
-	docker compose exec jupyter pip list --format=freeze > requirements.txt
-	docker compose cp jupyter:/app/requirements.txt ./src/notebook/requirements.txt
+	docker compose exec jupyter pip3 list --format=freeze > ./src/notebook/requirements.txt
