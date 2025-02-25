@@ -3,6 +3,10 @@ services:
     build:
       context: .
       dockerfile: dockerfiles/notebook/Dockerfile
+    deploy:
+      resources:
+        limits:
+          memory: 15g
     ports:
       - "8888:8888"
     volumes:
