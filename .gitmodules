@@ -39,3 +39,9 @@
 [submodule "docker/work/submodules/geopy-notebooks"]
 	path = docker/work/submodules/geopy-notebooks
 	url = git@github.com:datamongerbonny/geopy-notebooks.git
+[submodule "docker/work/submodules/tec-workshop"]
+	path = docker/work/submodules/tec-workshop
+	url = git@github.com:gboeing/tec-workshop.git
+[submodule "docker/work/submodules/srp-data"]
+	path = docker/work/submodules/srp-data
+	url = git@github.com:mopinfish/srp-data.git
