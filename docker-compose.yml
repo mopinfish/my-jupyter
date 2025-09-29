@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: dockerfiles/notebook/Dockerfile
+    image: my-jupyter:latest  # この行を追加
     deploy:
       resources:
         limits:
