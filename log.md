@@ -1,5 +1,7 @@
 # logs for operation this repository
 
+> **Note**: Pipfile/Pipfile.lockによる依存管理は廃止済み。現在はrequirements.txt + `make freeze` で管理している。
+
 ## 2023/12/06
 
 1. add lxml, html5lib to Pipfile

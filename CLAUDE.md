@@ -19,13 +19,7 @@ docker compose up
 
 ### 依存関係の管理
 ```bash
-# src/notebook/Pipfile変更後にPipfile.lockを更新
-make update_piplock
-
-# コンテナからPipfile/Pipfile.lockをローカルにコピー
-make cp_pipfiles_to_local
-
-# 現在のpipパッケージをrequirements.txtにエクスポート
+# コンテナ内でpip installした後、requirements.txtを更新
 make freeze
 ```
 
@@ -42,9 +36,9 @@ make removesubmodule DIR=<dirname>
 
 - **dockerfiles/notebook/Dockerfile**: GDAL Ubuntuイメージベース、`src/notebook/requirements.txt`からPythonパッケージをインストール
 - **docker-compose.yml**: JupyterLabサービス設定（メモリ上限15GB）、`docker/work`を`/app/work`にマウント
-- **src/notebook/**: Python依存関係のPipfileとrequirements.txt（GIS、ML、ベイズ統計）
+- **src/notebook/**: Python依存関係のrequirements.txt（GIS、ML、ベイズ統計）
 - **docker/work/submodules/**: 各種GIS/都市分析コースのサンプルノートブックを含むGitサブモジュール（ppd534、ppd599、ppde642、osmnx-examplesなど）
 
 ## Python環境
 
-主要パッケージ: osmnx、geopandas、folium、contextily、pymc、arviz、scikit-learn、rasterio、japanize-matplotlib。依存関係はPipfileで管理し、Dockerイメージではrequirements.txtからインストール。
+主要パッケージ: osmnx、geopandas、folium、contextily、pymc、arviz、scikit-learn、rasterio、japanize-matplotlib。依存関係はrequirements.txtで管理し、Dockerイメージビルド時にインストール。
