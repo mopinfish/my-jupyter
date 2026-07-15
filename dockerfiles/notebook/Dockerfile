@@ -1,5 +1,7 @@
 # GDAL公式イメージをベースとして使用
-FROM ghcr.io/osgeo/gdal:ubuntu-small-latest
+# python3.12 前提の requirements.txt ピン留めと整合させるため base タグを固定する
+# （ubuntu-small-latest は base OS が更新され python3.12-venv が消えてビルド不能になった）
+FROM ghcr.io/osgeo/gdal:ubuntu-small-3.10.2
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/99custom && \
