@@ -11,9 +11,10 @@ RUN echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/99custom && \
 
 # 必要なパッケージをインストール
 RUN apt-get update && apt-get install -y \
-    python3-pip \ 
+    python3-pip \
     python3.12-venv \
     fonts-noto-cjk \
+    osmium-tool \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
